@@ -49,10 +49,16 @@ pal <- colorBin("RdYlGn", domain = countries@data$SE.LPV.PRIM, bins = bins, reve
 
 #create labels
 labels <- sprintf(
-  "<strong>%s</strong><br/> <strong> %g%% </strong> Overall Learning Poverty <br/> <strong> %g%% </strong> Male Learning Poverty <br/> <strong> %g%% </strong> Female Learning Poverty <br/>
-                            <strong> %g%% </strong> Overall Children Out of School <br/> %g%% </strong> Male Children Out of School <br/> <strong> %g%% </strong> Female Children Out of School <br/>
-                            <strong> %g%% </strong> Overall Pupils below minimum reading proficiency at end of primary   <br/> <strong> %g%% </strong> Male Pupils below minimum reading proficiency at end of primary <br/>
-                            <br/> <strong> %g%% </strong> Female Pupils below minimum reading proficiency at end of primary ",
+  "<strong>%s</strong><br/> <hr size=2>
+  <strong> %g%% </strong> Overall Learning Poverty <br/> 
+  <strong> %g%% </strong> Male Learning Poverty <br/> 
+  <strong> %g%% </strong> Female Learning Poverty <br/> <hr size=1>
+  <strong> %g%% </strong> Overall Children Out of School <br/> 
+  <strong> %g%% </strong> Male Children Out of School <br/> 
+  <strong> %g%% </strong> Female Children Out of School <br/> <hr size=1>
+  <strong> %g%% </strong> Overall Pupils below minimum reading proficiency    <br/> 
+  <strong> %g%% </strong> Male Pupils below minimum reading proficiency                             <br/>
+  <strong> %g%% </strong> Female Pupils below minimum reading proficiency ",
   countries@data$ADMIN, round(countries@data$SE.LPV.PRIM, digits = 1), round(countries@data$SE.LPV.PRIM.MA, digits = 1), round(countries@data$SE.LPV.PRIM.FE, digits = 1),
                             round(countries@data$SE.LPV.PRIM.OOS, digits = 1), round(countries@data$SE.LPV.PRIM.OOS.MA, digits = 1), round(countries@data$SE.LPV.PRIM.OOS.FE, digits = 1),
                             round(countries@data$SE.LPV.PRIM.BMP, digits = 1), round(countries@data$SE.LPV.PRIM.BMP.MA, digits = 1), round(countries@data$SE.LPV.PRIM.BMP.FE, digits = 1)
