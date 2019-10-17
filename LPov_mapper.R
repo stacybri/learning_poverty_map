@@ -49,13 +49,15 @@ pal <- colorBin("RdYlGn", domain = countries@data$SE.LPV.PRIM, bins = bins, reve
 
 #create labels
 labels <- sprintf(
-  "<strong>%s</strong><br/> %g Overall Learning Poverty <br/> %g Male Learning Poverty <br/> %g Female Learning Poverty
-                            %g Overall Children Out of School <br/> %g Male Children Out of School <br/> %g Female Children Out of School
-                            %g Overall Pupils below minimum reading proficiency at end of primary (%).  <br/> %g Male Pupils below minimum reading proficiency at end of primary (%).  
-                            <br/> %g Female Pupils below minimum reading proficiency at end of primary (%). ",
+  "<strong>%s</strong><br/> <strong> %g%% </strong> Overall Learning Poverty <br/> <strong> %g%% </strong> Male Learning Poverty <br/> <strong> %g%% </strong> Female Learning Poverty <br/>
+                            <strong> %g%% </strong> Overall Children Out of School <br/> %g%% </strong> Male Children Out of School <br/> <strong> %g%% </strong> Female Children Out of School <br/>
+                            <strong> %g%% </strong> Overall Pupils below minimum reading proficiency at end of primary   <br/> <strong> %g%% </strong> Male Pupils below minimum reading proficiency at end of primary <br/>
+                            <br/> <strong> %g%% </strong> Female Pupils below minimum reading proficiency at end of primary ",
   countries@data$ADMIN, round(countries@data$SE.LPV.PRIM, digits = 1), round(countries@data$SE.LPV.PRIM.MA, digits = 1), round(countries@data$SE.LPV.PRIM.FE, digits = 1),
                             round(countries@data$SE.LPV.PRIM.OOS, digits = 1), round(countries@data$SE.LPV.PRIM.OOS.MA, digits = 1), round(countries@data$SE.LPV.PRIM.OOS.FE, digits = 1),
-                            round(countries@data$SE.LPV.PRM.BMP, digits = 1), round(countries@data$SE.LPV.PRM.BMP.MA, digits = 1), round(countries@data$SE.LPV.PRM.BMP.FE, digits = 1)) %>% 
+                            round(countries@data$SE.LPV.PRIM.BMP, digits = 1), round(countries@data$SE.LPV.PRIM.BMP.MA, digits = 1), round(countries@data$SE.LPV.PRIM.BMP.FE, digits = 1)
+  
+                            ) %>% 
   lapply(htmltools::HTML)
 
 
