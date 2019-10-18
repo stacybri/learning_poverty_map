@@ -26,7 +26,7 @@ dat <- dat %>%
 
 
 
-#read in TopoJSON polygon file from World Bank
+#read in TopoJSON polygon file 
 #downloaded https://datahub.io/core/geo-countries#data
 
 shape_dir<-"C:/Users/wb469649/Documents/Github/learning_poverty_map"
