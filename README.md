@@ -1,4 +1,4 @@
-# learning_poverty_map
+# Mapping Tool for Learning Poverty Data
 This is an open source script to map the learning poverty data.  See the Learning Poverty github repo for more details on how this measure is constructed.  https://github.com/worldbank/LearningPoverty.
 
 As a significant contributor to human capital deficits, the learning crisis undermines sustainable growth and poverty reduction. The paper introduces the new concept of _learning poverty_ and provides a synthetic indicator with global coverage to spotlight this crisis. _Learning poverty_ means being unable to read and understand a short, age-appropriate text by age 10. This indicator brings together schooling and learning by adjusting the proportion of kids in school bellow a proficiency threshold by the out-of-school population.
